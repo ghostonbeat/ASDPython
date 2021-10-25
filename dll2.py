@@ -4,20 +4,20 @@ class node :
         self.next = None
         self.back = None
 
-def cetak(m, n) :
-    temp = m
-    print('\nTraversal in forward direction')
-    while temp :
-        print (' {} '.format(temp.nama_mhs), end='')
-        temp = temp.next
+class link :
+    def __init__(self) :
+        self.first = None
 
-    print('')
+    def cetak(self, n) :
+        print('\nTraversal in forward direction')
+        while n :
+            print (' {} '.format(temp.nama_mhs))
+            temp = temp.next
 
-    temp = n
-    print('\nTraversal in reverse direction')
-    while temp :
-        print (' {} '.format(temp.nama_mhs), end='')
-        temp = temp.back
+        temp = n
+        while temp :
+            print (' {} '.format(temp.nama_mhs))
+            temp = temp.back
 
 if __name__ == '__main__' :
     first = node('Yanto')

@@ -1,4 +1,4 @@
-class node:
+class node :
     def __init__(self, nama_mhs) :
         self.nama_mhs = nama_mhs
         self.next = None
@@ -6,8 +6,10 @@ class node:
 def cetak(n) :
     temp = n
     while temp :
-        print(temp.nama_mhs)
+        print (' {} '.format(temp.nama_mhs), end='')
         temp = temp.next
+
+    print('')
 
 if __name__ == '__main__' :
     first = node('Yanto')
