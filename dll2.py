@@ -11,22 +11,25 @@ class link :
     def cetak(self, n) :
         print('\nTraversal in forward direction')
         while n :
-            print (' {} '.format(temp.nama_mhs))
-            temp = temp.next
+            print (' {} '.format(n.nama_mhs), end='')
+            last = n
+            n = n.next
 
-        temp = n
-        while temp :
-            print (' {} '.format(temp.nama_mhs))
-            temp = temp.back
+        print('\nTraversal in reverse direction')
+        while last :
+            print (' {} '.format(last.nama_mhs), end='')
+            last = last.back
 
 if __name__ == '__main__' :
-    first = node('Yanto')
+    list = link()
+
+    list.first = node('Yanto')
     middle = node('Yuli')
     last = node('Katno')
 
-    first.next = middle
-    middle.back = first
+    list.first.next = middle
+    middle.back = list.first
     middle.next = last
     last.back = middle
 
-    cetak(first, last)
+    list.cetak(list.first)
